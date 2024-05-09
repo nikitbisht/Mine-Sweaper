@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>MineSweaper</title>
+
+</head>
+<body>
+
+	<header>
+		<h2>MineSweeper</h2>
+	</header>
+	
+	<main>
+			<nav class="navigation">
+				<select name="mode" id="modes">
+					<option value="easy" selected>Easy</option>
+					<option value="medium">Medium</option>
+					<option value="hard">Hard</option>
+				</select>
+		</nav>
+
+		<div class="mine-container"></div>
+		<div class="loose-container">
+			<p id="loose-game">You Loose</p>
+			<button class="try-again">Try again</button>
+		</div>
+		<div class="win-container">
+			<p id="win-game">You Win!</p>
+			<button class="play-again">Wanna Play More</button>
+		</div>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
