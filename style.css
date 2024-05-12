@@ -26,6 +26,7 @@ main{
 	padding: 0.3rem,0.5rem;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 
 }
 #modes{
@@ -35,6 +36,26 @@ main{
 	margin: 0.3rem 0.5rem;
 	border-radius: 3px;
 }
+#again{
+	color: white;
+	font-size: 1.5rem;
+	cursor: pointer;
+	margin-right: 1rem;
+}
+.flag-img-container{
+	display: flex;
+	align-items: center;
+}
+#flag-img{
+	width: 3rem;
+}
+.flag-image{
+	width: 100%;
+}
+#mine-count{
+	color: white;
+	font-size: 1.2rem;
+}
 
 .mine-container{
 	width: 100%;
@@ -43,12 +64,14 @@ main{
 }
 .box{
 	border: 1px solid #333;
-	background-color: red;
+	background-color: green;
 	cursor: pointer;
-/*	overflow: hidden;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.bomb{
+.safe-place{
 	background-color: aqua;
 	display: flex;
 	font-size: 2rem;
@@ -125,4 +148,22 @@ main{
 	line-height: 4rem;
 	font-weight: bold;
 	cursor: pointer;
+}
+
+
+.Weasy{
+	width: 40px;
+	height: 40px;
+}
+
+.Wmedium{
+	width: 30px;
+	height: 30px;
+	font-size: 1.5rem;
+}
+
+.Whard{
+	width: 25px;
+	height: 25px;
+	font-size: 1.5rem;
 }
