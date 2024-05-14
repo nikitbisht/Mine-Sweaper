@@ -76,6 +76,7 @@ function updateMatrix () {
 	flag.innerText = `${flagCount}`;
 }
 
+
 function ModeChanging () {	
 	let preValue = 'easy';
 	mode.addEventListener("click",(e)=>{
