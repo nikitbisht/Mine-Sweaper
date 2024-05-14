@@ -83,14 +83,17 @@ function ModeChanging () {
 		if(mode.value==='easy' && mode.value != preValue){
 			mrow = 6;
 			mcol = 6;
+			updateMatrix();
 		}else if (mode.value==='medium' && mode.value != preValue) {
 			mrow = 8;
 			mcol = 8;
+			updateMatrix();
 		}else if (mode.value==='hard' && mode.value != preValue) {
 			mrow = 10;
 			mcol = 10;
+			updateMatrix();
 		}
-		updateMatrix();
+		
 		handleWindow();
 		preValue = mode.value;
 	});
