@@ -77,7 +77,7 @@ function updateMatrix () {
 
 
 function ModeChanging () {	
-	mode.addEventListener("click",(e)=>{
+	mode.addEventListener("touchend",(e)=>{
 		if(mode.value==='easy'){
 			mrow = 6;
 			mcol = 6;
