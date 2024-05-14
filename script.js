@@ -8,8 +8,6 @@ const again = document.querySelector("#again");
 let loose = document.querySelector(".try-again");
 let win = document.querySelector(".play-again");
 
-let option = document.querySelectorAll(".mode-type");
-
 
 let matrix = [];
 let visited = [];
@@ -79,44 +77,23 @@ function updateMatrix () {
 }
 
 function ModeChanging () {	
-	option = document.querySelectorAll(".mode-type");
-	console.log(option[0].value);
-
-	for(let i=0; i<option.length; i++){
-		option[i].addEventListener("click",()=>{
-			console.log(option[i].value);
-			if(option[i].value ==='easy'){
-				mrow = 6;
-				mcol = 6;
-			}else if (option[i].value ==='medium') {
-				mrow = 8;
-				mcol = 8;
-			}else if (option[i].value ==='hard') {
-				mrow = 10;
-				mcol = 10;
-			}
+	let preValue = 'easy';
+	mode.addEventListener("click",(e)=>{
+		if(mode.value==='easy' && mode.value != preValue){
+			mrow = 6;
+			mcol = 6;
+		}else if (mode.value==='medium' && mode.value != preValue) {
+			mrow = 8;
+			mcol = 8;
+		}else if (mode.value==='hard' && mode.value != preValue) {
+			mrow = 10;
+			mcol = 10;
+		}
 		updateMatrix();
 		handleWindow();
-		});
-	}
+		preValue = mode.value;
+	});
 }
-
-// function ModeChanging () {	
-// 	mode.addEventListener("touchend",(e)=>{
-// 		if(mode.value==='easy'){
-// 			mrow = 6;
-// 			mcol = 6;
-// 		}else if (mode.value==='medium') {
-// 			mrow = 8;
-// 			mcol = 8;
-// 		}else if (mode.value==='hard') {
-// 			mrow = 10;
-// 			mcol = 10;
-// 		}
-// 		updateMatrix();
-// 		handleWindow();
-// 	});
-// }
 
 
 //Creation of 2d array
