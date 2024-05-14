@@ -76,23 +76,19 @@ function updateMatrix () {
 }
 
 
-function ModeChanging (argument) {	
-	let preValue = mode.value;
+function ModeChanging () {	
 	mode.addEventListener("click",(e)=>{
-		if(e.target.value==='easy' && e.target.value != preValue){
+		if(mode.value==='easy'){
 			mrow = 6;
 			mcol = 6;
-			updateMatrix();
-		}else if (e.target.value==='medium' && e.target.value!=preValue) {
+		}else if (mode.value==='medium') {
 			mrow = 8;
 			mcol = 8;
-			updateMatrix();
-		}else if (e.target.value==='hard' && e.target.value != preValue) {
+		}else if (mode.value==='hard') {
 			mrow = 10;
 			mcol = 10;
-			updateMatrix();
 		}
-		preValue = mode.value;
+		updateMatrix();
 		handleWindow();
 	});
 }
